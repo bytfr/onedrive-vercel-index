@@ -327,10 +327,10 @@ const FileListing: FC<{ query?: ParsedUrlQuery }> = ({ query }) => {
                   <span>加载中 ...</span>{' '}
                 </>
               ) : isReachingEnd ? (
-                <span>No more files</span>
+                <span>没有更多的文件</span>
               ) : (
                 <>
-                  <span>Load more</span>
+                  <span>加载更多</span>
                   <FontAwesomeIcon icon="chevron-circle-down" />
                 </>
               )}
