@@ -68,7 +68,7 @@ const DownloadButtonGroup: React.FC<{ downloadUrl: string }> = ({ downloadUrl })
       <DownloadButton
         onClickCallback={() => window.open(downloadUrl)}
         btnColor="blue"
-        btnText="Download"
+        btnText="下载"
         btnIcon="file-download"
         btnTitle="Download the file directly through OneDrive"
       />
