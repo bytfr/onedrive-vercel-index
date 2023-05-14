@@ -101,7 +101,7 @@ const FolderListLayout = ({
                 className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
                 onClick={() => {
                   clipboard.copy(`${getBaseUrl()}${path === '/' ? '' : path}/${encodeURIComponent(c.name)}`)
-                  toast('Copied folder permalink.', { icon: '👌' })
+                  toast('复制文件夹直链成功', { icon: '👌' })
                 }}
               >
                 <FontAwesomeIcon icon={['far', 'copy']} />
