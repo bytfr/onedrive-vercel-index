@@ -70,7 +70,7 @@ const DownloadButtonGroup: React.FC<{ downloadUrl: string }> = ({ downloadUrl })
         btnColor="blue"
         btnText="下载"
         btnIcon="file-download"
-        btnTitle="Download the file directly through OneDrive"
+        btnTitle="直接通过OneDrive下载文件"
       />
       {/* <DownloadButton
         onClickCallback={() => window.open(`/api/proxy?url=${encodeURIComponent(downloadUrl)}`)}
@@ -82,12 +82,12 @@ const DownloadButtonGroup: React.FC<{ downloadUrl: string }> = ({ downloadUrl })
       <DownloadButton
         onClickCallback={() => {
           clipboard.copy(`${getBaseUrl()}/api?path=${asPath}&raw=true`)
-          toast.success('Copied direct link to clipboard.')
+          toast.success('复制直链到剪贴板成功')
         }}
         btnColor="pink"
         btnText="复制直链"
         btnIcon="copy"
-        btnTitle="Copy the permalink to the file to the clipboard"
+        btnTitle="将文件的直链复制到剪贴板"
       />
     </div>
   )
