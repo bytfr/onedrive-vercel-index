@@ -166,7 +166,7 @@ const FileListing: FC<{ query?: ParsedUrlQuery }> = ({ query }) => {
   if (!data) {
     return (
       <PreviewContainer>
-        <Loading loadingText="Loading ..." />
+        <Loading loadingText="加载中 ..." />
       </PreviewContainer>
     )
   }
@@ -324,7 +324,7 @@ const FileListing: FC<{ query?: ParsedUrlQuery }> = ({ query }) => {
               {isLoadingMore ? (
                 <>
                   <LoadingIcon className="inline-block h-4 w-4 animate-spin" />
-                  <span>Loading ...</span>{' '}
+                  <span>加载中 ...</span>{' '}
                 </>
               ) : isReachingEnd ? (
                 <span>No more files</span>
