@@ -65,13 +65,13 @@ const FolderListLayout = ({
               checked={totalSelected}
               onChange={toggleTotalSelected}
               indeterminate={true}
-              title={'Select files'}
+              title={'选择文件'}
             />
             {totalGenerating ? (
-              <Downloading title="Downloading selected files, refresh page to cancel" />
+              <Downloading title="下载选定的文件，刷新页面取消" />
             ) : (
               <button
-                title="Download selected files"
+                title="下载选定文件"
                 className="cursor-pointer rounded p-1.5 hover:bg-gray-300 disabled:cursor-not-allowed disabled:text-gray-400 disabled:hover:bg-white dark:hover:bg-gray-600 disabled:dark:text-gray-600 disabled:hover:dark:bg-gray-900"
                 disabled={totalSelected === 0}
                 onClick={handleSelectedDownload}
@@ -97,7 +97,7 @@ const FolderListLayout = ({
           {c.folder ? (
             <div className="hidden p-1.5 text-gray-700 dark:text-gray-400 md:flex">
               <span
-                title="Copy folder permalink"
+                title="复制文件夹直链"
                 className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
                 onClick={() => {
                   clipboard.copy(`${getBaseUrl()}${path === '/' ? '' : path}/${encodeURIComponent(c.name)}`)
@@ -107,10 +107,10 @@ const FolderListLayout = ({
                 <FontAwesomeIcon icon={['far', 'copy']} />
               </span>
               {folderGenerating[c.id] ? (
-                <Downloading title="Downloading folder, refresh page to cancel" />
+                <Downloading title="下载文件夹，刷新页面取消" />
               ) : (
                 <span
-                  title="Download folder"
+                  title="下载文件夹"
                   className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
                   onClick={() => {
                     const p = `${path === '/' ? '' : path}/${encodeURIComponent(c.name)}`
@@ -124,19 +124,19 @@ const FolderListLayout = ({
           ) : (
             <div className="hidden p-1.5 text-gray-700 dark:text-gray-400 md:flex">
               <span
-                title="Copy raw file permalink"
+                title="复制原始文件直链"
                 className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
                 onClick={() => {
                   clipboard.copy(
                     `${getBaseUrl()}/api?path=${path === '/' ? '' : path}/${encodeURIComponent(c.name)}&raw=true`
                   )
-                  toast.success('Copied raw file permalink.')
+                  toast.success('复制原始文件直链成功')
                 }}
               >
                 <FontAwesomeIcon icon={['far', 'copy']} />
               </span>
               <a
-                title="Download file"
+                title="下载文件"
                 className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
                 href={c['@microsoft.graph.downloadUrl']}
               >
