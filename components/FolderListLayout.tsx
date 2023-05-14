@@ -149,7 +149,7 @@ const FolderListLayout = ({
               <Checkbox
                 checked={selected[c.id] ? 2 : 0}
                 onChange={() => toggleItemSelected(c.id)}
-                title="Select file"
+                title="选择文件"
               />
             )}
           </div>
